@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ec2-user/app/target
+cd /home/ec2-user/app
 
 JAR_FILE=$(ls *.jar | grep -v plain | head -n 1)
 

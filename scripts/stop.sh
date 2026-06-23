@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PID=$(pgrep -f 'java -jar' || true)
+PID=$(pgrep -f 'bookApp.*\.jar' || true)
 
 if [ -n "$PID" ]; then
   echo "Stopping application: $PID"
