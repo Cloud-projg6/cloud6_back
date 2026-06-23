@@ -1,1 +1,21 @@
-buildspec.yml
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      # Maven Wrapper 실행 권한 부여
+      - chmod +x ./mvnw
+  build:
+    commands:
+      - echo Build started on `date`
+      # Maven 빌드 명령어로 변경 (테스트 제외)
+      - ./mvnw clean package -DskipTests
+artifacts:
+  files:
+    # Maven은 빌드 완료 시 target 폴더에 jar가 생성됩니다
+    - 'target/*.jar'
+    - 'appspec.yml'      # Day 2 배포용 (빈 파일 유지 가능)
+    - 'scripts/**/*'     # Day 2 배포용 (빈 폴더 유지 가능)
