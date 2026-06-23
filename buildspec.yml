@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  
+  pre_build:
+    commands:
+      - echo "Running unit tests..."
+      - ./mvnw test
+  
+  build:
+    commands:
+      - echo "Building application..."
+      - ./mvnw clean package -DskipTests
+  
+  post_build:
+    commands:
+      - echo "Build completed"
+
+artifacts:
+  files:
+    - target/bookapp-0.0.1-SNAPSHOT.jar
+  name: BookAppBackend
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
