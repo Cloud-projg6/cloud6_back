@@ -6,9 +6,6 @@ phases:
       java: corretto17
   build:
     commands:
-      - echo "Current directory:"
-      - ls -R  # 프로젝트 내부 구조를 로그로 출력해서 확인
-      - cd book-server  # 확실히 폴더로 이동
       - chmod +x ./mvnw
       - ./mvnw clean package
   post_build:
@@ -17,5 +14,5 @@ phases:
 
 artifacts:
   files:
-    - book-server/target/*.jar
+    - target/*.jar
   discard-paths: yes
