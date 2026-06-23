@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  build:
+    commands:
+      - cd book-server  # 프로젝트 폴더로 이동
+      - chmod +x ./mvnw
+      - ./mvnw clean package # 빌드 명령어
+  post_build:
+    commands:
+      - echo "Build completed."
+
+artifacts:
+  files:
+    - book-server/target/*.jar # 여기서 JAR 파일 위치를 정확히 지정해야 합니다.

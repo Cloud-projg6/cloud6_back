@@ -1,32 +1,32 @@
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\GlobalExceptionHandler.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\repository\BookCoverRepository.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\BookController.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookCoverResponse.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\BookCoverController.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\AuthController.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\CoverUpdateRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\repository\BookRepository.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\BookappApplication.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\SecurityConfig.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\BookCover.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\service\AuthService.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookCreateRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\OpenAiException.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\JwtTokenProvider.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\Book.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\ErrorResponse.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\repository\UserRepository.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\CoverGenerateRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookResponse.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\BookCoverNotFoundException.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookCoverRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookUpdateRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\service\BookCoverService.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\WebConfig.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\service\BookService.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\LoginResponse.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\SignupRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\LoginRequest.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\BookNotFoundException.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\JwtAuthenticationFilter.java
-C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\User.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\repository\BookRepository.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\LoginResponse.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookCoverRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\JwtAuthenticationFilter.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\service\BookCoverService.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\GlobalExceptionHandler.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\BookappApplication.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\WebConfig.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\BookCover.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\AuthController.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\BookController.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\User.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\BookCoverController.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\OpenAiException.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookUpdateRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\BookCoverNotFoundException.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\service\BookService.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\BookNotFoundException.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\CoverUpdateRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\repository\UserRepository.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\Book.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\CoverGenerateRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookCreateRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\ErrorResponse.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\repository\BookCoverRepository.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\JwtTokenProvider.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\SignupRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\SecurityConfig.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\LoginRequest.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookCoverResponse.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\service\AuthService.java
+C:\Users\User\Desktop\새 폴더\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\BookResponse.java
