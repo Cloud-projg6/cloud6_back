@@ -6,17 +6,13 @@ phases:
       java: corretto17
   build:
     commands:
-      - echo "파일 구조 탐색 및 빌드 시작..."
-      - find . -name "pom.xml" -exec dirname {} \; > pom_dir.txt
-      - export BUILD_DIR=$(cat pom_dir.txt | head -n 1)
-      - echo "빌드할 디렉토리: $BUILD_DIR"
-      - cd $BUILD_DIR
+      - echo "Build Start"
       - mvn clean package -DskipTests
   post_build:
     commands:
-      - echo "Build completed."
+      - echo "Build Completed"
 
 artifacts:
   files:
-    - "**/target/*.jar"
+    - target/*.jar
   discard-paths: yes
