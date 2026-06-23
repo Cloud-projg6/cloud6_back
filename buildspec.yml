@@ -6,13 +6,15 @@ phases:
       java: corretto17
   build:
     commands:
-      - cd book-server  # 프로젝트 폴더로 이동
+      # cd book-server 제거 (루트에서 바로 빌드)
       - chmod +x ./mvnw
-      - ./mvnw clean package # 빌드 명령어
+      - ./mvnw clean package
   post_build:
     commands:
       - echo "Build completed."
 
 artifacts:
   files:
-    - book-server/target/*.jar # 여기서 JAR 파일 위치를 정확히 지정해야 합니다.
+    # 경로를 target/*.jar 로 수정 (루트에 target이 바로 있다고 가정)
+    - target/*.jar
+  discard-paths: yes
