@@ -8,13 +8,11 @@ phases:
   build:
     commands:
       - echo Build started
-      - cd backend
       - chmod +x mvnw || true
       - ./mvnw clean package -DskipTests || mvn clean package -DskipTests
-      - cd ..
 
 artifacts:
   files:
     - appspec.yml
     - scripts/**
-    - backend/target/*.jar
+    - target/*.jar
