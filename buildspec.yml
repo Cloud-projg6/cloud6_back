@@ -6,13 +6,11 @@ phases:
       java: corretto17
   build:
     commands:
-      # 폴더 구조가 어떻게 되어있든 찾을 수 있도록 자동 탐색
-      - echo "파일 구조 탐색 중..."
+      - echo "파일 구조 탐색 및 빌드 시작..."
       - find . -name "pom.xml" -exec dirname {} \; > pom_dir.txt
       - export BUILD_DIR=$(cat pom_dir.txt | head -n 1)
       - echo "빌드할 디렉토리: $BUILD_DIR"
       - cd $BUILD_DIR
-      # mvnw 대신 mvn 명령어로 빌드 (권한 문제 회피)
       - mvn clean package -DskipTests
   post_build:
     commands:
