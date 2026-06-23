@@ -6,7 +6,9 @@ phases:
       java: corretto17
   build:
     commands:
-      # cd book-server 제거 (루트에서 바로 빌드)
+      - echo "Current directory:"
+      - ls -R  # 프로젝트 내부 구조를 로그로 출력해서 확인
+      - cd book-server  # 확실히 폴더로 이동
       - chmod +x ./mvnw
       - ./mvnw clean package
   post_build:
@@ -15,6 +17,5 @@ phases:
 
 artifacts:
   files:
-    # 경로를 target/*.jar 로 수정 (루트에 target이 바로 있다고 가정)
-    - target/*.jar
+    - book-server/target/*.jar
   discard-paths: yes
