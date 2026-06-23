@@ -1,0 +1,32 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /opt/bookapp/backend
+
+permissions:
+  - object: /opt/bookapp/backend
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+    mode: 755
+    type:
+      - directory
+  - object: /opt/bookapp/backend
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+    mode: 644
+    type:
+      - file
+
+hooks:
+  ApplicationStart:
+    - location: deploy-scripts/start-backend-hook.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStop:
+    - location: deploy-scripts/stop-backend-hook.sh
+      timeout: 300
+      runas: ec2-user
