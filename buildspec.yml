@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+
+  build:
+    commands:
+      - echo Build started
+      - cd backend
+      - chmod +x mvnw || true
+      - ./mvnw clean package -DskipTests || mvn clean package -DskipTests
+      - cd ..
+
+artifacts:
+  files:
+    - appspec.yml
+    - scripts/**
+    - backend/target/*.jar

@@ -32,6 +32,7 @@ public class SecurityConfig {
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/books").permitAll()
                         .requestMatchers(HttpMethod.GET, "/books/*").permitAll()
+                        .requestMatchers("/health").permitAll()
                         .anyRequest().authenticated()
                 )
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()))

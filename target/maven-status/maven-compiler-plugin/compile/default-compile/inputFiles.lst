@@ -29,4 +29,5 @@ C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\boo
 C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\dto\LoginRequest.java
 C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\exception\BookNotFoundException.java
 C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\config\JwtAuthenticationFilter.java
+C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\controller\HealthController.java
 C:\Users\User\Desktop\fixed_book_project\book-server\src\main\java\com\aivle\bookapp\domain\User.java

@@ -5,6 +5,7 @@ com\aivle\bookapp\dto\BookCoverResponse.class
 com\aivle\bookapp\service\BookCoverService.class
 com\aivle\bookapp\dto\BookCoverRequest.class
 com\aivle\bookapp\service\AuthService.class
+com\aivle\bookapp\controller\HealthController.class
 com\aivle\bookapp\BookappApplication.class
 com\aivle\bookapp\dto\CoverUpdateRequest.class
 com\aivle\bookapp\domain\Book.class
