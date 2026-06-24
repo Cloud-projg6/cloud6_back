@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Stop Spring Boot application"
-PID=$(pgrep -f 'java -jar /home/ubuntu/app/target/bookapp-0.0.1-SNAPSHOT.jar')
+PID=$(pgrep -f 'bookapp-0.0.1-SNAPSHOT.jar')
 if [ -z "$PID" ]; then
     echo "No application running."
 else
