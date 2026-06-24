@@ -10,4 +10,6 @@ phases:
 
 artifacts:
   files:
+    - appspec.yml
+    - deploy-scripts/**
     - target/*.jar
