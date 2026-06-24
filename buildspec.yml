@@ -4,15 +4,20 @@ phases:
   install:
     runtime-versions:
       java: corretto17
+  pre_build:
+    commands:
+      # 주석 처리된 빈 scripts 폴더가 없을 수 있으므로 안전하게 폴더를 먼저 생성합니다.
+      - mkdir -p scripts
+      # AWS CodeBuild에 등록한 JWT_SECRET 환경변수 값을 env.sh 파일로 저장
+      - echo "export JWT_SECRET=${JWT_SECRET}" > scripts/env.sh
+      - chmod +x scripts/env.sh
   build:
     commands:
       - echo Build started on `date`
-      # 윈도우/리눅스 래퍼 파일 이슈를 피하기 위해 내장된 mvn 명령어로 직접 빌드합니다.
       - mvn clean package -DskipTests
 artifacts:
   files:
-    # 스크린샷의 target 폴더 안에 생성된 jar 파일명을 매핑합니다.
     - 'target/*.jar'
-    - 'appspec.yml'      # Day 2 배포용 (현재 루트에 빈 파일로 만들어만 두세요)
-    - 'scripts/**/*'     # Day 2 배포용 (현재 루트에 빈 폴더로 만들어만 두세요)
-  discard-paths: no  # 폴더 구조(scripts/ 구조 등)를 그대로 유지하며 압축하라는 옵션입니다.
+    - 'appspec.yml'
+    - 'scripts/**/*'
+  discard-paths: no  # 폴더 구조(scripts/ 구조 등)를 그대로 유지하며 압축하는 옵션
