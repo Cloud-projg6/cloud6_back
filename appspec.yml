@@ -14,10 +14,10 @@ permissions:
       - directory
 hooks:
   ApplicationStop:
-    - location: scripts/stop.sh
+    - location: deploy-scripts/stop.sh
       timeout: 60
       runas: ec2-user
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: deploy-scripts/start.sh
       timeout: 300
       runas: ec2-user
