@@ -13,3 +13,4 @@ artifacts:
     - appspec.yml
     - deploy-scripts/**
     - target/*.jar
+    - config/**    
