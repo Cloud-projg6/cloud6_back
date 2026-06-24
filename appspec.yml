@@ -11,6 +11,10 @@ permissions:
     group: ec2-user
     mode: 755
 hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
   ApplicationStop:
     - location: scripts/stop.sh
       timeout: 60
