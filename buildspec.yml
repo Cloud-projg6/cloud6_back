@@ -16,4 +16,3 @@ artifacts:
     - 'appspec.yml'      # Day 2 배포용 (현재 루트에 빈 파일로 만들어만 두세요)
     - 'scripts/**/*'     # Day 2 배포용 (현재 루트에 빈 폴더로 만들어만 두세요)
   discard-paths: no  # 폴더 구조(scripts/ 구조 등)를 그대로 유지하며 압축하라는 옵션입니다.
-  

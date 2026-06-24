@@ -13,5 +13,9 @@ else
     sleep 5
 fi
 
+# AMI 생성 시 같이 구워져 나온 기존 JAR 파일 및 폴더 찌꺼기 완벽 청소
+echo "기존 배포 파일 및 target 폴더 찌꺼기 제거 중..."
+sudo rm -rf /home/ec2-user/app/target/*
+
 # CodeDeploy에게 이 스크립트가 무사히 끝났음을 강제로 알립니다.
 exit 0
