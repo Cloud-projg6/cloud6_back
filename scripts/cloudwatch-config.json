@@ -1,0 +1,19 @@
+{
+  "agent": {
+    "run_as_user": "root"
+  },
+  "logs": {
+    "logs_collected": {
+      "files": {
+        "collect_list": [
+          {
+            "file_path": "/home/ec2-user/app/app.log",
+            "log_group_name": "/user53/bookapp/backend",
+            "log_stream_name": "{instance_id}",
+            "timezone": "Local"
+          }
+        ]
+      }
+    }
+  }
+}
