@@ -1,20 +1,15 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
       java: corretto17
   build:
     commands:
-      - chmod +x ./gradlew
-      - ./gradlew clean build -x test
-      # 실행 가능한 jar를 고정 이름으로 복사 (plain.jar 제외)
-      - mkdir -p deploy
-      - cp $(ls build/libs/*.jar | grep -v plain | head -n1) deploy/app.jar
-
+      - cd Backend                # 백엔드 폴더명에 맞게 (루트면 삭제)
+      - chmod +x ./mvnw
+      - ./mvnw -B package -DskipTests
 artifacts:
-  base-directory: .
   files:
-    - deploy/app.jar
+    - target/*.jar
     - appspec.yml
     - scripts/**/*
