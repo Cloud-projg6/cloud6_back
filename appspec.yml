@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/app   # Amazon Linux 경로로 수정
+file_exists_behavior: OVERWRITE # 덮어쓰기 허용
+
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
