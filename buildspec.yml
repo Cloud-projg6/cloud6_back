@@ -4,6 +4,10 @@ phases:
   install:
     runtime-versions:
       java: corretto17
+  pre_build:
+    commands:
+      - echo "export JWT_SECRET=${JWT_SECRET}" > scripts/env.sh
+      - chmod +x scripts/env.sh
   build:
     commands:
       - echo "Building the Spring Boot application..."
