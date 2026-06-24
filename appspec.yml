@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/book-server
+hooks:
+  ApplicationStart:
+    - location: scripts/start.sh
+      timeout: 300
