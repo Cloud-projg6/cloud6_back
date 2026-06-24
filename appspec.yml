@@ -14,10 +14,6 @@ permissions:
       - file
       - directory
 hooks:
-  BeforeInstall:                         
-    - location: deploy-scripts/cleanup.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
     - location: deploy-scripts/start.sh
       timeout: 300
