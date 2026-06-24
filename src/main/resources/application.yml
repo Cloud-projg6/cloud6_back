@@ -1,6 +1,9 @@
 server:
   port: 8080
 
+jwt:
+  secret: mySuperSecretKeyCorrectString1234567890abcdefg
+
 spring:
   config:
     import: optional:file:./config/application-secret.yml
