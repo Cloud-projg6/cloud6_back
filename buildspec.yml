@@ -8,11 +8,13 @@ phases:
   pre_build:
     commands:
       - echo "Running unit tests..."
+      - chmod +x mvnw
       - ./mvnw test
   
   build:
     commands:
       - echo "Building application..."
+      - chmod +x mvnw
       - ./mvnw clean package -DskipTests
   
   post_build:
