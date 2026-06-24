@@ -8,6 +8,6 @@ if [ -z "$PID" ]; then
     echo "No application running on port 8080."
 else
     echo "Killing process $PID"
-    kill -15 $PID
+    kill -9 $PID
     sleep 5
 fi
