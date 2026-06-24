@@ -9,9 +9,6 @@ if [ -f /home/ec2-user/app/scripts/env.sh ]; then
     source /home/ec2-user/app/scripts/env.sh
 fi
 
-# CloudWatch Agent 실행
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/home/ec2-user/app/scripts/cloudwatch-config.json
-
 # ec2-user 권한으로 Java 절대 경로를 이용해 백그라운드 실행 (환경 변수 유지)
 nohup sudo -E -u ec2-user /usr/bin/java -jar bookapp-0.0.1-SNAPSHOT.jar > /home/ec2-user/app/app.log 2>&1 < /dev/null &
 
