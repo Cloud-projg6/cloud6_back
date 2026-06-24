@@ -4,15 +4,26 @@ phases:
   install:
     runtime-versions:
       java: corretto17
+    commands:
+      - echo "Installing build dependencies"
 
   build:
     commands:
-      - echo Build started
-      - chmod +x mvnw || true
+      - echo "Building Spring Boot app"
+      - chmod +x ./mvnw || true
       - ./mvnw clean package -DskipTests || mvn clean package -DskipTests
 
+  post_build:
+    commands:
+      - echo "Preparing deployment artifact"
+      - mkdir -p deploy
+      - cp target/*.jar deploy/backend-app.jar
+      - cp appspec.yml deploy/appspec.yml
+      - cp -r scripts deploy/scripts
+
 artifacts:
+  base-directory: deploy
   files:
+    - backend-app.jar
     - appspec.yml
     - scripts/**
-    - target/*.jar

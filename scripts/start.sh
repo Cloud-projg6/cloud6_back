@@ -1,12 +1,17 @@
 #!/bin/bash
 
-cd /home/ec2-user/app
+APP_DIR="/home/ec2-user/app"
+JAR_FILE="$APP_DIR/backend-app.jar"
 
-JAR_FILE=$(ls *.jar | grep -v plain | head -n 1)
+echo "Starting Spring Boot app..."
 
-if [ -z "$JAR_FILE" ]; then
-  echo "JAR file not found"
-  exit 1
-fi
+mkdir -p "$APP_DIR"
 
-nohup java -jar "$JAR_FILE" > /home/ec2-user/app/app.log 2>&1 &
+nohup java -jar "$JAR_FILE" \
+  --server.port=8080 \
+  > "$APP_DIR/app.log" 2>&1 &
+
+echo $! > "$APP_DIR/app.pid"
+
+sleep 10
+exit 0

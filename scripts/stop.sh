@@ -1,11 +1,18 @@
 #!/bin/bash
 
-PID=$(pgrep -f 'bookApp.*\.jar' || true)
+APP_DIR="/home/ec2-user/app"
+PID_FILE="$APP_DIR/app.pid"
 
-if [ -n "$PID" ]; then
-  echo "Stopping application: $PID"
-  kill -15 $PID
-  sleep 5
-else
-  echo "No running application"
+echo "Stopping existing Spring Boot app..."
+
+if [ -f "$PID_FILE" ]; then
+  PID=$(cat "$PID_FILE")
+  if ps -p "$PID" > /dev/null 2>&1; then
+    kill "$PID"
+    sleep 5
+  fi
+  rm -f "$PID_FILE"
 fi
+
+pkill -f "backend-app.jar" || true
+exit 0
