@@ -31,6 +31,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/stress").permitAll()
                         .requestMatchers(HttpMethod.GET, "/books").permitAll()
                         .requestMatchers(HttpMethod.GET, "/books/*").permitAll()
                         .anyRequest().authenticated()
