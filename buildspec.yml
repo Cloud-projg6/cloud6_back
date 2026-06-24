@@ -26,6 +26,7 @@ artifacts:
     - target/bookapp-0.0.1-SNAPSHOT.jar
     - appspec.yml
     - deploy-scripts/**/*
+  discard-paths: yes
   name: BookAppBackend
 
 cache:
