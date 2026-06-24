@@ -23,10 +23,10 @@ permissions:
 
 hooks:
   ApplicationStart:
-    - location: deploy-scripts/start-backend-hook.sh
+    - location: start-backend-hook.sh
       timeout: 300
       runas: ec2-user
   ApplicationStop:
-    - location: deploy-scripts/stop-backend-hook.sh
+    - location: stop-backend-hook.sh
       timeout: 300
       runas: ec2-user
