@@ -1,3 +1,3 @@
 #!/bin/bash
-pkill -f 'java -jar' || true
+systemctl stop bookapp || true
 exit 0

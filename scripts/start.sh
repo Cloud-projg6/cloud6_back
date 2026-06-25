@@ -1,5 +1,23 @@
 #!/bin/bash
-cd /home/ec2-user/app
-JAR=$(find . -maxdepth 2 -name "*.jar" | grep -v original | head -n1)
-nohup java -jar "$JAR" --server.port=8080 > /home/ec2-user/app/app.log 2>&1 &
-exit 0     # ← 명시적으로 즉시 종료
+JAR=$(find /home/ec2-user/app -maxdepth 2 -name "*.jar" | grep -v original | head -n1)
+
+cat > /etc/systemd/system/bookapp.service <<EOF
+[Unit]
+Description=bookapp
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/ec2-user/app
+ExecStart=/usr/bin/java -jar $JAR --server.port=8080
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable bookapp
+systemctl restart bookapp
+exit 0
