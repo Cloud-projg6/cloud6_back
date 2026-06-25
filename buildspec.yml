@@ -5,10 +5,8 @@ phases:
       java: corretto17
   build:
     commands:
-      - cd book-server
       - mvn -B package -DskipTests
 artifacts:
-  base-directory: book-server
   files:
     - target/*.jar
     - appspec.yml
