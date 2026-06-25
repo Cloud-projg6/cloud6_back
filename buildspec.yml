@@ -5,9 +5,8 @@ phases:
       java: corretto17
   build:
     commands:
-      - ls -la
       - chmod +x ./mvnw
-      - ./mvnw -B package -DskipTests
+      - mvn -B package -DskipTests
 artifacts:
   files:
     - target/*.jar
