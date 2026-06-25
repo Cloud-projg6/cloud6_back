@@ -16,7 +16,9 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                     "http://localhost:5173",
                     "http://user54-mini6-prod-website.s3-website-us-west-1.amazonaws.com",
-                    "http://user54-mini6-staging-website.s3-website-us-west-1.amazonaws.com"
+                    "http://user54-mini6-staging-website.s3-website-us-west-1.amazonaws.com",
+                    "http://54.183.228.180",
+                    "http://ec2-54-183-228-180.us-west-1.compute.amazonaws.com"
                     )
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
