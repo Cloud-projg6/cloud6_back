@@ -5,7 +5,6 @@ phases:
       java: corretto17
   build:
     commands:
-      - cd Backend                # 백엔드 폴더명에 맞게 (루트면 삭제)
       - chmod +x ./mvnw
       - ./mvnw -B package -DskipTests
 artifacts:
