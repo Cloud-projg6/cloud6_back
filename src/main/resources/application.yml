@@ -26,3 +26,5 @@ spring:
     serialization:
       write-dates-as-timestamps: false
       # 26.06.11 추가 수정
+jwt:
+  secret: ${JWT_SECRET:bXlzdXBlcnNlY3JldGp3dGtleS4uLg==}   # 환경변수 없으면 뒤 기본값 사용
